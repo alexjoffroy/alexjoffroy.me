@@ -1,0 +1,14 @@
+@tailwind preflight;
+
+@tailwind components;
+
+@import "./components/button";
+@import "./components/content";
+@import "./components/navbar";
+@import "./components/noty";
+
+@tailwind utilities;
+
+@import "./utilities/overlay";
+@import "./utilities/text-shadow";
+@import "./utilities/transition";

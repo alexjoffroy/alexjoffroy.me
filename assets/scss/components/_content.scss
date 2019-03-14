@@ -1,0 +1,36 @@
+.content {
+    @apply .leading-loose .text-justify .tracking-normal;
+
+    @each $size in (1, 2, 3, 4, 5, 6) {
+        h#{$size} {
+            @apply .antialiased .font-heading .mt-8 .text-grey-darker;
+        }
+    }
+
+    h1 { @apply .text-5xl; }
+    h2 { @apply .text-3xl; }
+    h3 { @apply .text-xl; }
+    h4 { @apply .text-lg; }
+    h5 { @apply .text-base; }
+    h6 { @apply .text-sm; }
+
+    p, ul, ol {
+        @apply .mb-2;
+    }
+
+    pre {
+        @apply .text-xs .text-grey-darker .bg-grey-lighter .p-8 .mb-8;
+    }
+
+    a {
+        @apply .font-bold .no-underline .text-primary .transition-all;
+
+        &:hover {
+            @apply .text-grey-darker;
+        }
+    }
+
+    strong {
+        @apply .font-bold;
+    }
+}

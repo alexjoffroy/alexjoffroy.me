@@ -1,0 +1,16 @@
+$props: all, opacity, transform;
+
+@each $prop in $props {
+    .transition-#{$prop} {
+        transition-duration: 400ms;
+        transition-property: #{$prop};
+        will-change: #{$prop};
+    }
+}
+.transition-fast {
+    transition-duration: 200ms;
+}
+
+.transition-slow {
+    transition-duration: 600ms;
+}

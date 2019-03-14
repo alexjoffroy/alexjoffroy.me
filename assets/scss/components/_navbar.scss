@@ -1,0 +1,14 @@
+.navbar {
+    will-change: transform;
+    @apply .transition-transform;
+}
+.navbar--pinned {
+    @apply .bg-black;
+    transform: translateY(0%);
+}
+.navbar--top {
+    @apply .bg-transparent;
+}
+.navbar--unpinned {
+    transform: translateY(-100%);
+}

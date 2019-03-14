@@ -1,0 +1,41 @@
+ @import "~noty/src/noty.scss";
+
+.noty_bar {
+    @apply .relative .mx-0 .my-0 .overflow-hidden;
+
+    .noty_body {
+        @apply .px-4 .py-3 .text-base;    
+        text-shadow: 1px 1px 1px rgba(0, 0, 0, .1);
+    }
+
+    .noty_buttons {
+        @apply .p-3
+    }
+}
+
+.noty_has_timeout.noty_has_progressbar .noty_progressbar {
+    @apply .opacity-25 .h-1;    
+}
+
+.noty_type__alert,
+.noty_type__notification {
+    @apply .bg-blue .text-white;
+
+}
+
+.noty_type__warning {
+    @apply .bg-orange .text-white;    
+}
+
+.noty_type__error {
+    @apply .bg-red .text-white;        
+}
+
+.noty_type__info,
+.noty_type__information {
+    @apply .bg-blue .text-white;        
+}
+
+.noty_type__success {
+    @apply .bg-green .text-white;        
+}

@@ -1,0 +1,31 @@
+.overlay,
+.hover\:overlay {
+    @apply .relative
+}
+
+.overlay:before,
+.hover\:overlay:before {
+    @apply .absolute .bg-black .h-full .opacity-25 .pin .transition-opacity .w-full .z-10;
+    content: " ";
+}
+
+.hover\:overlay:before {
+    @apply .opacity-0;
+}
+
+.hover\:overlay:hover:before {
+    @apply opacity-25;
+}
+
+.overlay-gradient-bottom::before {
+    @apply .absolute .block .pin-b .w-full .z-10;
+    background: linear-gradient(transparent, #000);
+    content: '';
+    top: 60%;
+}
+
+.overlay-gradient-top::before {
+    @apply .absolute .block .pin .w-full .z-10;
+    background: linear-gradient(#000, transparent);
+    content: '';
+}
