@@ -1,0 +1,5 @@
+@import "~highlight.js/styles/github-gist.css";
+
+pre code.hljs {
+    @apply .text-xs .text-grey-darker .bg-grey-lighter .px-8 py-6 .rounded-sm .mb-8;
+}

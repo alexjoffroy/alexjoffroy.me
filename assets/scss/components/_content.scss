@@ -17,11 +17,7 @@
     p, ul, ol {
         @apply .mb-2;
     }
-
-    pre {
-        @apply .text-xs .text-grey-darker .bg-grey-lighter .p-8 .mb-8;
-    }
-
+    
     a {
         @apply .font-bold .no-underline .text-primary .transition-all;
 
