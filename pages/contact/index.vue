@@ -3,7 +3,7 @@
     <main class="mb-16">
 
       <form 
-        action="/contact-message-sent"
+        :action="localePath({ name: 'contact-success' })"
         name="contact" 
         method="POST"
         data-netlify-recaptcha="true"
