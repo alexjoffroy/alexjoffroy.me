@@ -100,9 +100,14 @@ export default {
     CloseIcon,
     MenuIcon
   },
-  data() {
-    return {
-      links: [
+  computed: {
+    availableLocales() {
+      return this.$parent.$i18n.locales.filter(
+        i => i.code !== this.$i18n.locale
+      )
+    },
+    links() {
+      return [
         {
           to: { name: 'blog' },
           caption: this.$t('blog.title'),
@@ -119,13 +124,6 @@ export default {
           exact: true
         }
       ]
-    }
-  },
-  computed: {
-    availableLocales() {
-      return this.$parent.$i18n.locales.filter(
-        i => i.code !== this.$i18n.locale
-      )
     }
   }
 }
