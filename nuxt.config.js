@@ -1,10 +1,6 @@
 const path = require('path')
 const fs = require('fs')
 
-function mapContents(key, callback) {
-  return fs.readdirSync(`contents/${key}`).map(callback)
-}
-
 module.exports = {
   mode: 'universal',
 
@@ -22,17 +18,16 @@ module.exports = {
     bodyAttrs: {
       class: 'font-body bg-primary'
     },
-    title: 'AlexandreJoffroy.fr',
+    title: 'AlexJoffroy.me',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'robots', name: 'robots', content: 'noindex,nofollow' },
       { hid: 'og:type', property: 'og:type', content: 'website' },
-      { hid: 'og:locale', property: 'og:locale', content: 'fr_FR' },
       {
         hid: 'og:site_name',
         property: 'og:site_name',
-        content: 'AlexandreJoffroy.fr'
+        content: 'AlexJoffroy.me'
       },
       {
         hid: 'twitter:card',
@@ -108,34 +103,26 @@ module.exports = {
   generate: {
     subFolders: true,
     routes() {
-      let pages = mapContents('pages', filename => {
-        const [_, slug] = filename.match(/(.+)\.md$/)
-        return {
-          route: `/${slug}`
-        }
-      })
-      let galleries = mapContents('galleries', filename => {
-        const [_, order, slug] = filename.match(/(\d+).(.+)\.md$/)
-        return {
-          route: `/galeries/${slug}`
-        }
-      })
-      let blogPosts = mapContents('blog-posts', filename => {
-        const [_, publishedAt, slug] = filename.match(
-          /(\d{4}-\d{2}-\d{2}).(.+)\.md$/
-        )
-        return {
-          route: `/blog/${slug}-${+new Date(publishedAt) / 1000}`
-        }
-      })
+      return fs
+        .readdirSync(`contents/blog-posts`)
+        .map(locale => {
+          return fs
+            .readdirSync(`contents/blog-posts/${locale}`)
+            .map(filename => {
+              let [_, publishedAt, slug] = filename.match(
+                /(\d{4}-\d{2}-\d{2}).(.+)\.md$/
+              )
 
-      return [
-        '/',
-        '/blog',
-        '/galeries',
-        '/me-contacter',
-        '/demande-contact-envoyee'
-      ].concat(pages, galleries, blogPosts)
+              return {
+                route:
+                  locale != 'en'
+                    ? `/${locale}/blog/${slug}-${+new Date(publishedAt) / 1000}`
+                    : `/blog/${slug}-${+new Date(publishedAt) / 1000}`
+              }
+            })
+        })
+        .flat()
+        .concat(['/', '/blog', '/contact', '/contact/success'])
     }
   },
 
