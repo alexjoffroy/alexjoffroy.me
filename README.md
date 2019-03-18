@@ -1,6 +1,6 @@
-# alexandrejoffroy
+# AlexJoffroy.me 
 
-> Alexandre Joffroy - Photograpy website
+> AlexJoffroy.me - Blog about web development
 
 ## Build Setup
 
