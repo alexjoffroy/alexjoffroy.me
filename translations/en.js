@@ -25,6 +25,7 @@ export default {
   },
   layout: {
     hide_menu: 'Hide menu',
+    select_your_language: 'Select your language',
     show_menu: 'Show menu'
   }
 }

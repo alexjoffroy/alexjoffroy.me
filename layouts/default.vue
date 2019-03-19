@@ -52,15 +52,6 @@
           active-class="text-primary"
           class="hidden md:block antialiased mx-4 no-underline text-base text-grey font-heading font-bold transition hover:text-primary transition-all">{{ caption }}</nuxt-link>
 
-        <div class="mx-4 hidden md:flex">
-          <nuxt-link
-            v-for="locale in $parent.$i18n.locales"
-            :key="locale.code"
-            :to="locale.code == 'fr' ? '/fr' : '/'"
-            :class="{ 'text-primary' : locale.code == $parent.$i18n.locale }"
-            class="capitalize block antialiased mx-1 no-underline text-base text-grey font-heading font-bold transition hover:text-primary transition-all">{{ locale.code }}</nuxt-link>
-        </div>
-
       </div>
     </nav>
     
@@ -68,17 +59,28 @@
       <nuxt/>
     </main>
 
-    <footer class="content pt-8 pb-16 text-center text-xs text-grey">
-      <p>© 2018-{{ (new Date()).getFullYear() }} Alex Joffroy.</p>
-      <p>Proudly built with <a 
-        href="https://nuxtjs.org/" 
-        target="_blank">NuxtJS</a> and <a 
-          href="https://tailwindcss.com" 
-          target="_blank">TailwindCSS</a>, hosted on <a 
-            href="https://github.com/alexjoffroy" 
-            target="_blank">Github</a>, and deployed on <a 
-              href="https://www.netlify.com/"
-              target="_blank">Netlify</a>.</p>
+    <footer class="container pt-8 pb-16 text-grey">
+      <div class="mx-auto text-center text-xs mb-8">
+        {{ $t('layout.select_your_language') }}
+        <nuxt-link
+          v-for="locale in $parent.$i18n.locales"
+          :key="locale.code"
+          :to="locale.code == 'fr' ? '/fr' : '/'"
+          :class="{ 'text-primary' : locale.code == $parent.$i18n.locale }"
+          class="capitalize antialiased mx-1 no-underline text-grey font-heading font-bold transition hover:text-primary transition-all">{{ locale.name }}</nuxt-link>
+      </div>
+      <div class="content text-center text-xs">
+        <p>Proudly built with <a 
+          href="https://nuxtjs.org/" 
+          target="_blank">NuxtJS</a> and <a 
+            href="https://tailwindcss.com" 
+            target="_blank">TailwindCSS</a>, hosted on <a 
+              href="https://github.com/alexjoffroy" 
+              target="_blank">Github</a>, and deployed on <a 
+                href="https://www.netlify.com/"
+                target="_blank">Netlify</a>.</p>
+        <p>© 2018-{{ (new Date()).getFullYear() }} Alex Joffroy.</p>
+      </div>
     </footer>
 
     <portal-target name="menu"/>

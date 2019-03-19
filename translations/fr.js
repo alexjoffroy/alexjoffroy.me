@@ -24,6 +24,7 @@ export default {
   },
   layout: {
     hide_menu: 'Masquer le menu',
+    select_your_language: 'Choisissez votre langue',
     show_menu: 'Afficher le menu'
   }
 }
