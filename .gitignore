@@ -84,3 +84,4 @@ dist
 **/.DS_Store
 
 sw.*
+static/sitemap.xml

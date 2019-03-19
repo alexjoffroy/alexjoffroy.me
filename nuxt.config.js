@@ -1,11 +1,20 @@
-import { build, env, generate, head, i18n, meta, manifest } from './config'
+import {
+  build,
+  env,
+  generate,
+  head,
+  i18n,
+  meta,
+  manifest,
+  sitemap
+} from './config'
 
 module.exports = {
   mode: 'universal',
 
   css: ['~/assets/scss/app.scss'],
 
-  modules: ['@nuxtjs/pwa', ['nuxt-i18n', i18n]],
+  modules: [['nuxt-i18n', i18n], '@nuxtjs/pwa', '@nuxtjs/sitemap'],
 
   build,
 
@@ -17,5 +26,7 @@ module.exports = {
 
   manifest,
 
-  meta
+  meta,
+
+  sitemap
 }
