@@ -32,15 +32,6 @@
               active-class="text-primary"
               class="antialiased mb-4 no-underline text-4xl text-grey font-heading font-bold transition transition-all" 
               @click.native="toggle">{{ caption }}</nuxt-link>
-            <div class="mt-8 flex">
-              <nuxt-link
-                v-for="locale in $parent.$i18n.locales"
-                :key="locale.code"
-                :to="locale.code == 'fr' ? '/fr' : '/'"
-                :class="{ 'text-primary' : locale.code == $parent.$i18n.locale }"
-                class="capitalize block antialiased mx-1 no-underline text-base text-grey text-xl font-heading font-bold transition hover:text-primary transition-all"
-                @click.native="toggle">{{ locale.code }}</nuxt-link>
-            </div>
           </template>
         </burger-menu>
 
@@ -61,7 +52,7 @@
 
     <footer class="container pt-8 pb-16 text-grey">
       <div class="mx-auto text-center text-xs mb-8">
-        {{ $t('layout.select_your_language') }}
+        {{ $t('layout.select_your_language') }}:
         <nuxt-link
           v-for="locale in $parent.$i18n.locales"
           :key="locale.code"
@@ -103,11 +94,6 @@ export default {
     MenuIcon
   },
   computed: {
-    availableLocales() {
-      return this.$parent.$i18n.locales.filter(
-        i => i.code !== this.$i18n.locale
-      )
-    },
     links() {
       return [
         {
