@@ -8,7 +8,7 @@
     </nuxt-link>
     <small 
       v-if="subtitle" 
-      class="block my-4 w-full text-sm text-grey">{{ subtitle }}</small>
+      class="block my-3 w-full text-sm text-grey-dark">{{ subtitle }}</small>
   </article>
 </template>
 

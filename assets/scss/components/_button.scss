@@ -4,6 +4,7 @@
         .border-2 
         .border-primary
         .bg-primary
+        .font-bold
         .no-underline 
         .px-8  
         .py-3 
@@ -16,7 +17,7 @@
         .relative;
 
     &:hover {
-        @apply .bg-grey-lightest .text-primary;
+        @apply .bg-primary-light .border-primary-light .shadow-md;
     }
     
     &.is-loading {

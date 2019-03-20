@@ -1,6 +1,6 @@
 export default {
   bodyAttrs: {
-    class: 'font-body bg-primary'
+    class: 'antialiased font-body bg-primary'
   },
   meta: [{ hid: 'robots', name: 'robots', content: 'noindex,nofollow' }],
   link: [

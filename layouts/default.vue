@@ -4,7 +4,7 @@
       <div class="flex container items-center justify-center h-32">
         <nuxt-link 
           :to="localePath({ name: 'index' })" 
-          class="font-heading font-bold antialiased mr-auto no-underline text-2xl text-grey">
+          class="font-heading font-bold mr-auto no-underline text-2xl text-grey">
           Alex <span class="text-primary">Joffroy</span>
         </nuxt-link>
 
@@ -30,7 +30,7 @@
               :key="key"
               :to="localePath(to)" 
               active-class="text-primary"
-              class="antialiased mb-4 no-underline text-4xl text-grey font-heading font-bold transition transition-all" 
+              class="mb-4 no-underline text-4xl text-grey font-heading font-bold transition transition-all" 
               @click.native="toggle">{{ caption }}</nuxt-link>
           </template>
         </burger-menu>
@@ -41,7 +41,7 @@
           :key="key"
           :to="localePath(to)" 
           active-class="text-primary"
-          class="hidden md:block antialiased mx-4 no-underline text-base text-grey font-heading font-bold transition hover:text-primary transition-all">{{ caption }}</nuxt-link>
+          class="hidden md:block mx-4 no-underline text-base text-grey font-heading font-bold transition hover:text-primary transition-all">{{ caption }}</nuxt-link>
 
       </div>
     </nav>
@@ -50,7 +50,7 @@
       <nuxt/>
     </main>
 
-    <footer class="antialiased container pt-8 pb-16 text-grey">
+    <footer class="container pt-8 pb-16 text-grey-dark">
       <div class="mx-auto text-center text-xs mb-8">
         {{ $t('layout.select_your_language') }}:
         <nuxt-link
@@ -58,7 +58,7 @@
           :key="locale.code"
           :to="locale.code == 'fr' ? '/fr' : '/'"
           :class="{ 'text-primary' : locale.code == $parent.$i18n.locale }"
-          class="capitalize font-bold no-underline text-grey transition-all mx-1">{{ locale.name }}</nuxt-link>
+          class="capitalize font-bold no-underline text-grey-dark transition-all mx-1">{{ locale.name }}</nuxt-link>
       </div>
       <div class="content text-center text-xs">          
         <p>{{ $t('layout.built_with') }} <a 
