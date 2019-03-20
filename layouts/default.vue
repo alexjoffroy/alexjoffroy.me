@@ -50,7 +50,7 @@
       <nuxt/>
     </main>
 
-    <footer class="container pt-8 pb-16 text-grey">
+    <footer class="antialiased container pt-8 pb-16 text-grey">
       <div class="mx-auto text-center text-xs mb-8">
         {{ $t('layout.select_your_language') }}:
         <nuxt-link
@@ -58,16 +58,16 @@
           :key="locale.code"
           :to="locale.code == 'fr' ? '/fr' : '/'"
           :class="{ 'text-primary' : locale.code == $parent.$i18n.locale }"
-          class="capitalize antialiased mx-1 no-underline text-grey font-heading font-bold transition hover:text-primary transition-all">{{ locale.name }}</nuxt-link>
+          class="capitalize font-bold no-underline text-grey transition-all mx-1">{{ locale.name }}</nuxt-link>
       </div>
-      <div class="content text-center text-xs">
-        <p>Proudly built with <a 
+      <div class="content text-center text-xs">          
+        <p>{{ $t('layout.built_with') }} <a 
           href="https://nuxtjs.org/" 
-          target="_blank">NuxtJS</a> and <a 
+          target="_blank">NuxtJS</a> {{ $t('layout.and') }} <a 
             href="https://tailwindcss.com" 
-            target="_blank">TailwindCSS</a>, hosted on <a 
-              href="https://github.com/alexjoffroy" 
-              target="_blank">Github</a>, and deployed on <a 
+            target="_blank">TailwindCSS</a>, {{ $t('layout.hosted_on') }} <a 
+              href="https://github.com/alexjoffroy/alexjoffroy.me" 
+              target="_blank">Github</a>, {{ $t('layout.and_deployed_on') }} <a 
                 href="https://www.netlify.com/"
                 target="_blank">Netlify</a>.</p>
         <p>© 2018-{{ (new Date()).getFullYear() }} Alex Joffroy.</p>

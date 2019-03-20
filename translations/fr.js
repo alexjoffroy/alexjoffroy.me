@@ -23,7 +23,11 @@ export default {
     your_message_has_been_sent: 'Votre demande de contact a été envoyée.'
   },
   layout: {
+    and: 'et',
+    and_deployed_on: 'et déployé sur',
+    built_with: 'Réalisé avec',
     hide_menu: 'Masquer le menu',
+    hosted_on: 'hébergé sur',
     select_your_language: 'Choisissez votre langue',
     show_menu: 'Afficher le menu'
   }

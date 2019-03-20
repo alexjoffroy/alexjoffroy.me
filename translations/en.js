@@ -24,7 +24,11 @@ export default {
     your_message_has_been_sent: 'Your message has been sent.'
   },
   layout: {
+    and: 'and',
+    and_deployed_on: 'and deployed on',
+    built_with: 'Build with',
     hide_menu: 'Hide menu',
+    hosted_on: 'hosted on',
     select_your_language: 'Select your language',
     show_menu: 'Show menu'
   }
