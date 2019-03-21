@@ -2,7 +2,6 @@ export default {
   bodyAttrs: {
     class: 'antialiased font-body bg-primary'
   },
-  meta: [{ hid: 'robots', name: 'robots', content: 'noindex,nofollow' }],
   link: [
     {
       rel: 'stylesheet',
