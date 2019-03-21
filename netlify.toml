@@ -5,7 +5,38 @@
 [[redirects]]
   from = "/"
   to = "/blog"
-
 [[redirects]]
   from = "/fr"
   to = "/fr/blog"
+
+# Old URLs
+[[redirects]]
+  from = "/get-in-touch"
+  to = "/contact"
+[[redirects]]
+  from = "/fr/me-contacter"
+  to = "/fr/contact"
+[[redirects]]
+  from = "/blog/do-not-use-env-elsewhere-than-in-config-files"
+  to = "/blog/do-not-use-env-elsewhere-than-in-config-files-1520812800"
+[[redirects]]
+  from = "/blog/how-to-upload-a-local-file-to-a-ftp-with-laravel"
+  to = "/blog/how-to-upload-a-local-file-to-a-ftp-with-laravel-1520467200"
+[[redirects]]
+  from = "/blog/easily-add-localization-to-your-laravel-app"
+  to = "/blog/easily-add-localization-to-your-laravel-app-1520208000"
+[[redirects]]
+  from = "/blog/some-tips-to-boost-your-new-website"
+  to = '/blog/some-tips-to-boost-your-new-website-1519776000'
+[[redirects]]
+  from = "/fr/blog/nutilisez-pas-la-fonction-env-ailleurs-que-dans-les-fichiers-de-config"
+  to = "/fr/blog/evitez-la-fonction-env-en-dehors-des-fichiers-de-config-1520812800"
+[[redirects]]
+  from = "/fr/blog/uploader-un-fichier-local-sur-un-ftp-avec-laravel"
+  to = "/fr/blog/uploader-un-fichier-local-sur-un-ftp-avec-laravel-1520467200"
+[[redirects]]
+  from = "/fr/blog/ajouter-simplement-la-localisation-a-laravel"
+  to = "/fr/blog/ajouter-simplement-la-localisation-a-laravel-1520208000"
+[[redirects]]
+  from = "/fr/blog/quelques-astuces-pour-booster-votre-nouveau-site"
+  to = "/fr/blog/quelques-astuces-pour-booster-votre-nouveau-site-1519776000"
