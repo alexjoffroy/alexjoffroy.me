@@ -63,13 +63,17 @@
       <div class="content text-center text-xs">          
         <p>{{ $t('layout.built_with') }} <a 
           href="https://nuxtjs.org/" 
-          target="_blank">NuxtJS</a> {{ $t('layout.and') }} <a 
+          target="_blank" 
+          rel="noopener">NuxtJS</a> {{ $t('layout.and') }} <a 
             href="https://tailwindcss.com" 
-            target="_blank">TailwindCSS</a>, {{ $t('layout.hosted_on') }} <a 
+            target="_blank" 
+            rel="noopener">TailwindCSS</a>, {{ $t('layout.hosted_on') }} <a 
               href="https://github.com/alexjoffroy/alexjoffroy.me" 
-              target="_blank">Github</a>, {{ $t('layout.and_deployed_on') }} <a 
+              target="_blank" 
+              rel="noopener">Github</a>, {{ $t('layout.and_deployed_on') }} <a 
                 href="https://www.netlify.com/"
-                target="_blank">Netlify</a>.</p>
+                target="_blank" 
+                rel="noopener">Netlify</a>.</p>
         <p>© 2018-{{ (new Date()).getFullYear() }} Alex Joffroy.</p>
       </div>
     </footer>
