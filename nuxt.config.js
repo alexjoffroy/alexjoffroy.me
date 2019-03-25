@@ -6,6 +6,7 @@ import {
   i18n,
   meta,
   manifest,
+  purgeCSS,
   sitemap
 } from './config'
 
@@ -14,7 +15,12 @@ module.exports = {
 
   css: ['~/assets/scss/app.scss'],
 
-  modules: [['nuxt-i18n', i18n], '@nuxtjs/pwa', '@nuxtjs/sitemap'],
+  modules: [
+    ['nuxt-i18n', i18n],
+    '@nuxtjs/pwa',
+    '@nuxtjs/sitemap',
+    'nuxt-purgecss'
+  ],
 
   build,
 
@@ -27,6 +33,8 @@ module.exports = {
   manifest,
 
   meta,
+
+  purgeCSS,
 
   sitemap
 }

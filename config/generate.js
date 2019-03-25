@@ -1,7 +1,7 @@
 const fs = require('fs')
 
 export default {
-  subFolders: true,
+  subFolders: false,
   routes() {
     let routes = ['/', '/blog', '/contact', '/contact/success']
 

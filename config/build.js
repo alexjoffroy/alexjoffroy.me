@@ -1,6 +1,7 @@
 const path = require('path')
 
 export default {
+  extractCSS: true,
   extend(config, ctx) {
     // Run ESLint on save
     if (ctx.isDev && ctx.isClient) {

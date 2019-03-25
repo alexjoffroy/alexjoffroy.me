@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-3xl text-grey-darker font-bold font-heading mb-16">{{ $t('about.title') }}</h1>
+    <h1 class="text-3xl text-grey-darkest font-bold font-heading mb-16">{{ $t('about.title') }}</h1>
     <div class="flex flex-wrap">
       <render-front-matter :source="partial"/>
     </div>

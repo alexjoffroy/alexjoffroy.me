@@ -67,6 +67,7 @@ export default {
   },
   head() {
     let head = this.getHead({
+      description: this.$t('contact.seo_title'),
       title: this.$t('contact.seo_title')
     })
 
