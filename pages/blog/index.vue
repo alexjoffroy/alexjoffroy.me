@@ -31,6 +31,7 @@ export default {
   mixins: [GetHeadMixin],
   head() {
     return this.getHead({
+      description: this.$t('blog.seo_title'),
       title: this.$t('blog.seo_title')
     })
   },

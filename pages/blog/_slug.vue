@@ -20,8 +20,8 @@ export default {
   },
   head() {
     return this.getHead({
-      title: this.blogPost.attributes.title,
-      description: this.blogPost.attributes.excerpt
+      title: this.blogPost.attributes.seo_title,
+      description: this.blogPost.attributes.seo_description
     })
   },
   mixins: [GetHeadMixin],
