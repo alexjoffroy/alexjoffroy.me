@@ -1,6 +1,6 @@
 <template>
   <div v-if="blogPost">
-    <h1 class="text-3xl text-grey-darker font-bold font-heading">{{ blogPost.attributes.title }}</h1>
+    <h1 class="text-3xl text-grey-darkest font-bold font-heading">{{ blogPost.attributes.title }}</h1>
     <small class="block mt-4 mb-16 w-full text-base text-grey-dark">
       {{ $t('blog.posted_on', {
         date: blogPost.publishedAt.toLocaleDateString($i18n.locale, { year: 'numeric', month: 'long', day: 'numeric' })

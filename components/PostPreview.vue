@@ -3,12 +3,12 @@
     <nuxt-link
       slot="link"
       :to="route" 
-      class="no-underline font-heading font-bold text-xl text-grey-darker hover:text-primary transition-all">
+      class="no-underline font-heading font-bold text-xl text-grey-darkest hover:text-primary transition-all">
       {{ title }}
     </nuxt-link>
     <small 
       v-if="subtitle" 
-      class="block my-3 w-full text-sm text-grey-dark">{{ subtitle }}</small>
+      class="block my-3 w-full text-sm text-grey-darker">{{ subtitle }}</small>
   </article>
 </template>
 

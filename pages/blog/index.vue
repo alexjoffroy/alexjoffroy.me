@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1 class="text-3xl text-grey-darker font-bold font-heading mb-16">{{ $t('blog.title') }}</h1>
+    <h1 class="text-3xl text-grey-darkest font-bold font-heading mb-16">{{ $t('blog.title') }}</h1>
     <ul class="list-reset">
       <li 
         v-for="(blogPost, key) in blogPosts" 
