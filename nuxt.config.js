@@ -22,7 +22,7 @@ module.exports = {
     'nuxt-purgecss'
   ],
 
-  plugins: ['plugins/webfonts.client'],
+  plugins: ['plugins/portal-vue', 'plugins/webfonts.client'],
 
   build,
 

@@ -83,13 +83,9 @@
 </template>
 
 <script>
-import Vue from 'vue'
-import PortalVue from 'portal-vue'
 import BurgerMenu from '~/components/BurgerMenu'
 import CloseIcon from '~/assets/svg/close.svg'
 import MenuIcon from '~/assets/svg/menu.svg'
-
-Vue.use(PortalVue)
 
 export default {
   components: {
