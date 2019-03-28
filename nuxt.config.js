@@ -22,6 +22,8 @@ module.exports = {
     'nuxt-purgecss'
   ],
 
+  plugins: ['plugins/webfonts.client'],
+
   build,
 
   env,

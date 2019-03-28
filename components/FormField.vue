@@ -12,7 +12,7 @@
       :name="name" 
       :placeholder="placeholder" 
       :required="required" 
-      class="h-96 w-full px-4 py-3 appearance-none font-light text-sm bg-grey-lightest resize-none outline-none rounded border border-grey-light focus:bg-white transition-all"/>
+      class="h-96 w-full px-4 py-3 appearance-none text-sm bg-grey-lightest resize-none outline-none rounded border border-grey-light focus:bg-white transition-all"/>
     <input 
       v-else
       :id="name" 
@@ -21,7 +21,7 @@
       :type="type" 
       :placeholder="placeholder" 
       :required="required" 
-      class="w-full px-4 py-3 appearance-none font-light text-sm bg-grey-lightest outline-none rounded border border-grey-light focus:bg-white transition-all">
+      class="w-full px-4 py-3 appearance-none text-sm bg-grey-lightest outline-none rounded border border-grey-light focus:bg-white transition-all">
   </div>
 </template>
 
