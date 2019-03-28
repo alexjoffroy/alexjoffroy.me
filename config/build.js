@@ -33,5 +33,5 @@ export default {
       loader: 'vue-svg-loader'
     })
   },
-  vendor: ['headroom.js', 'noty']
+  vendor: ['highlight.js', 'noty']
 }

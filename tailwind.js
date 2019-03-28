@@ -352,8 +352,7 @@ module.exports = {
         sm: '576px',
         md: '768px'
       }
-    }),
-    require('tailwindcss-object-fit')(['responsive'])
+    })
   ],
 
   options: {
