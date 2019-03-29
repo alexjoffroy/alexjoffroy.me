@@ -10,6 +10,8 @@ import {
   sitemap
 } from './config'
 
+import { colors } from './tailwind.js'
+
 module.exports = {
   mode: 'universal',
 
@@ -23,6 +25,11 @@ module.exports = {
   ],
 
   plugins: ['plugins/portal-vue', 'plugins/webfonts.client'],
+
+  loading: {
+    color: colors.primary,
+    height: '.25rem'
+  },
 
   build,
 
